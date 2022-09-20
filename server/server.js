@@ -14,11 +14,12 @@ const PrototypeData_db = low(PrototypeData);
 const User_db = low(User);
 const UpdateDataRecord_db = low(UpdateDataRecord);
 var app = express();
-app.use(express.json());
 var cookieParser = require('cookie-parser');
-const { data } = require('jquery');
+
+app.use(express.json());
 app.use(cookieParser('secret'));
-app.use(express.static(__dirname + '/prototypeFile'));
+app.use(express.static(__dirname + '/uploads'));
+app.use(express.static(__dirname + '/wwwroot'));
 app.all('*', function (req, res, next) {
 	res.header('Access-Control-Allow-Origin', '*');
 	res.header('Access-Control-Allow-Headers', 'Content-Type,Content-Length,Authorization,Accept,X-Requested-With');

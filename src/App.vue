@@ -11,7 +11,7 @@
           </el-container>
         </el-container>
       </el-container>
-      <el-footer>Copyright ©️2020  <a href="https://github.com/liyinchigithub">https://github.com/liyinchigithub</a></el-footer>
+      <el-footer>Copyright ©️2022</el-footer>
       <el-backtop :bottom="60"></el-backtop>
     </div>
   </div>
@@ -44,7 +44,7 @@ export default {
   },
   beforeCreate() {
 
-    var permission = window.sessionStorage.getItem("permission").split(","); 
+    var permission = (window.sessionStorage.getItem("permission")||'').split(","); 
     if (permission.length > 0) {
       for (let index = 0; index < permission.length; index++) {
         const element = permission[index];

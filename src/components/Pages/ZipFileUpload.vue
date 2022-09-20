@@ -3,7 +3,7 @@
     <el-upload
       class="upload-demo"
       :action="upload"
-      name="prototypeFile"
+      name="uploads"
       accept=".zip"
       :on-preview="handlePreview"
       :on-remove="handleRemove"
@@ -50,9 +50,9 @@ export default {
       return this.$confirm(`确定移除 ${file.name}？`);
     },
     handleAvatarSuccess(res, file) {
-      this.files_path = res.prototypeFile.path.replace("prototypeFile\\", "");
-      this.files_name_zip = res.prototypeFile.name;
-      this.files_name = res.prototypeFile.name.replace(".zip", "");
+      this.files_path = res.uploads.path.replace("uploads\\", "");
+      this.files_name_zip = res.uploads.name;
+      this.files_name = res.uploads.name.replace(".zip", "");
       var arr = [
         this.GLOBAL.server_url + this.files_name_zip,
         this.files_name,
