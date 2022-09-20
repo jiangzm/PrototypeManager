@@ -2,7 +2,7 @@ FROM node:12 AS build
 
 WORKDIR /app
 
-ENV host=proto.meiji888.com
+ENV host=proto.meiji8888.com
 ENV port=80
 
 COPY . .

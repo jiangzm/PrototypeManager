@@ -1,7 +1,6 @@
 
 <script>
-var server_url = "http://127.0.0.1:8006"; 
-// const server_url='http://10.104.113.228:8006';
+var server_url = "http://proto.meiji8888.com";
 var select_category = "/select_category"; 
 var search_category_data_condition = "/search_category_data_condition"; 
 var add_category = "/add_category";
