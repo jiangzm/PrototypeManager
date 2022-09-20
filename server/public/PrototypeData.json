@@ -1,13 +1,4 @@
 {
   "prototype_data": [
-    {
-      "prototype_data_id": "1",
-      "prototype_data_name": "MJ&FQ-C端原型",
-      "prototype_data": "http://127.0.0.1:8006/MJ&FQ-C端原型/index.html",
-      "prototype_data_category": "分类1",
-      "prototype_data_remark": "",
-      "prototype_data_create_time": "2022-09-20-14-54-13",
-      "prototype_data_is_delete": true
-    }
   ]
 }
