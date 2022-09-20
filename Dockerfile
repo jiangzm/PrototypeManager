@@ -21,9 +21,13 @@ COPY --from=build /app/server ./
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
 ENV TZ="Asia/Shanghai"
+ENV NODE_ENV=production
 
 RUN npm install --production --registry=https://registry.npm.taobao.org
 
 EXPOSE 80
 
 ENTRYPOINT ["npm", "run", "start"]
+
+# docker build -t proto .
+# docker run -it --name proto -p 80:80 -v ~/proto/uploads:/app/uploads -d proto
