@@ -2,8 +2,12 @@ FROM node:12 AS build
 
 WORKDIR /app
 
+ENV host=proto.meiji888.com
+ENV port=80
+
 COPY . .
 
+ENV SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/
 RUN npm install --registry=https://registry.npm.taobao.org
 
 RUN npm run build
